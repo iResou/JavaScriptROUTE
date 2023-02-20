@@ -1,0 +1,47 @@
+
+:root{
+    --bg-color: rgb(20,20,20)
+}
+
+
+body{
+background-color:  var(--bg-color);
+overflow: hidden;
+}
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    50% { 
+        scale: 1 1.5;
+
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+#burbuja{
+background-color: white;
+height: 300px;
+aspect-ratio: 1;
+position: absolute;
+left: 50%;
+top: 50%;
+translate:  -50% -50%;
+border-radius: 50%;
+background:  linear-gradient(
+    to right,
+    aquamarine,
+    mediumpurple
+);
+animation: rotate 10s infinite;
+filter: blur(200px);
+}
+
+#blur{
+height: 100%;
+width: 100%;
+position: absolute;
+z-index: 2;
+backdrop-filter: blur(200px);
+}
